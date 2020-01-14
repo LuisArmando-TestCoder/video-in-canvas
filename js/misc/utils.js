@@ -32,6 +32,7 @@ function getPixels({
                 pixel.c = `rgba(${r},${g},${b},${opacity || a})`;
                 pixel.w = w;
                 pixel.h = h;
+                pixel.drive = 0;
             }
         ).filter((_, i) => !(i % splitter)),
         umbral

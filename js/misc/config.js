@@ -1,6 +1,6 @@
 const config = {
-    umbral: 100,
-    splitter: 5,
+    umbral: 160,
+    splitter: 11,
     w: 1,
     h: 1,
     opacity: 1
