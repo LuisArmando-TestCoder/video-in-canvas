@@ -251,16 +251,15 @@ video {
   position: fixed;
   display: grid;
   place-content: center;
-  top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  padding: 25px;
 }
 
 .play-screen__btn {
   border: 0;
   font-family: "Plaster", cursive;
-  font-size: 20vw;
+  font-size: 5vw;
   background: transparent;
   cursor: pointer;
   transition: 0.25s;
