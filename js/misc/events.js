@@ -21,3 +21,30 @@ Object.keys(inputs).forEach(key => {
         if (utils.v.paused) utils.data = utils.getPixels(config);
     });
 });
+
+utils.btn.addEventListener('click', e => {
+    utils.data = utils.getPixels(config);
+    if (utils.v.paused) {
+        utils.v.play();
+        utils.btn.classList.add('hide-btn');
+    } else {
+        utils.v.pause();
+        utils.btn.classList.remove('hide-btn');
+    }
+});
+
+window.addEventListener('keydown', e => {
+    const { key } = e;
+    const jump = 2;
+    const triggers = ({
+        ArrowRight() {
+            if(utils.v.currentTime < utils.v.duration)
+                utils.v.currentTime += jump;
+        },
+        ArrowLeft() { 
+            if(utils.v.currentTime > 0) 
+                utils.v.currentTime -= jump;
+        }
+    })[key];
+    return triggers && triggers();
+});

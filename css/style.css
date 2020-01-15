@@ -271,7 +271,7 @@ video {
 }
 
 .hide-btn:not(:hover) {
-  opacity: 0.0175;
+  opacity: 0.05;
 }
 
 .controls {
@@ -286,7 +286,7 @@ video {
 
 .controls__item {
   padding: 25px;
-  opacity: 0.5;
+  opacity: 0.05;
   outline: none;
   transition: 0.25s;
 }
