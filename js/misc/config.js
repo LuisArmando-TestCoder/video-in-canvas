@@ -1,5 +1,5 @@
 const config = {
-    umbral: 160,
+    umbral: 120,
     splitter: 11,
     w: 1,
     h: 1,
