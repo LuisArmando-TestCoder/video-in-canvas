@@ -21,7 +21,7 @@ size();
 onMouseMove();
 
 draw(() => {
-    clear();
+    clear('#10101099');
     if (v.paused && utils.data) {
         return renderGroup('rect', utils.data, (p, index) => {
             if (p.drive <= 0) p.drive = 0;
