@@ -6,7 +6,10 @@ const inputs = {
     splitter: document.getElementById('splitter'),
     w: document.getElementById('w'),
     h: document.getElementById('h'),
-    opacity: document.getElementById('opacity')
+    opacity: document.getElementById('opacity'),
+    acceleration: document.getElementById('acceleration'),
+    deceleration: document.getElementById('deceleration'),
+    brushRadius: document.getElementById('brushRadius')
 };
 
 Object.keys(inputs).forEach(key => {
@@ -48,3 +51,5 @@ window.addEventListener('keydown', e => {
     })[key];
     return triggers && triggers();
 });
+
+export default inputs;

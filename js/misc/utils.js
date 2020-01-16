@@ -6,6 +6,7 @@ const scaleAxis = (proportion, axis) => axis * proportion;
 const proportion = () => c.width / v.videoWidth;
 const scaledHeight = () => scaleAxis(proportion(), v.videoHeight);
 const yAxis = () => c.height / 2 - scaledHeight() / 2;
+const isOutOfTheBox = (p, box) => (p.x < 0 || p.x > box.width) || (p.y < 0 || p.y > box.height);
 
 let data;
 
@@ -78,15 +79,16 @@ function getPixelsByUmbral(pixels, umbral) {
 }
 
 const utils = {
+    v,
+    btn,
     data,
+    yAxis,
     getPixels,
-    getIMGData,
     scaleAxis,
+    getIMGData,
     proportion,
     scaledHeight,
-    yAxis,
-    btn,
-    v
+    isOutOfTheBox
 };
 
 export default utils;

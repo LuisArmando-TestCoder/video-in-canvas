@@ -49,7 +49,7 @@ video {
 .controls {
   color: var(--font-primary);
   text-transform: capitalize;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   font-family: sans-serif;
@@ -57,7 +57,7 @@ video {
 }
 
 .controls__item {
-  padding: 25px;
+  padding: 15px;
   opacity: 0.05;
   outline: none;
   transition: 0.25s;
