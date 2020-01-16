@@ -21,7 +21,6 @@ size();
 onMouseMove();
 
 draw(() => {
-    const t1 = performance.now();
     clear();
     if (v.paused && utils.data) {
         return renderGroup('rect', utils.data, (p, index) => {
@@ -47,6 +46,4 @@ draw(() => {
     }
     ctx.drawImage(v, 0, yAxis(), c.width, scaledHeight());
     if (!v.currentTime && !utils.data) utils.data = getPixels(config);
-    const t2 = performance.now() - t1;
-    console.log(t2);
 });
