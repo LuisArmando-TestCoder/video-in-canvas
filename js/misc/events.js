@@ -49,7 +49,9 @@ window.addEventListener('keydown', e => {
                 utils.v.currentTime -= jump;
         }
     })[key];
-    return triggers && triggers();
+    if (!document.querySelector('input:focus')) {
+        return triggers && triggers();
+    }
 });
 
 export default inputs;
