@@ -28,8 +28,11 @@ function getPixels({
                     r,
                     g,
                     b,
-                    a
+                    a,
+                    x,
+                    y
                 } = pixel;
+                pixel.original = { x, y };
                 pixel.c = `rgba(${r},${g},${b},${opacity || a})`;
                 pixel.w = w;
                 pixel.h = h;

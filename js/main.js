@@ -14,7 +14,7 @@ const {
     scaledHeight,
     yAxis,
     v,
-    isOutOfTheBox
+    // isOutOfTheBox
 } = utils;
 
 size();
@@ -34,13 +34,17 @@ draw(() => {
                 } = getDistanceBetween(mouse()).and(p);
                 p.x += -(p.leg1 || leg1) / 100 * p.drive;
                 p.y += -(p.leg2 || leg2) / 100 * p.drive;
-                p.isOutOfTheScreen = isOutOfTheBox(p, c);
+                // p.isOutOfTheScreen = isOutOfTheBox(p, c);
                 if (distance <= +brushRadius.value) {
                     p.leg1 = leg1;
                     p.leg2 = leg2;
                     p.drive += +acceleration.value;
                 }
-                if (p.isOutOfTheScreen) utils.data.splice(index, 1);
+                // if (p.isOutOfTheScreen) utils.data.splice(index, 1);
+            }
+            if(p.drive === 0) {
+                p.x += (p.original.x - p.x) / 10;
+                p.y += (p.original.y - p.y) / 10;
             }
         });
     }

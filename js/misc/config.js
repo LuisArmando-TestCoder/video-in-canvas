@@ -6,7 +6,7 @@ const config = {
     opacity: 1,
     acceleration: 0.8,
     deceleration: 0.2,
-    brushRadius: 100
+    brushRadius: 64
 };
 
 export default config;
